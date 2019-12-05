@@ -1,36 +1,57 @@
-TP1  - GND
-TP2  - BAT - Vin
-TP3  - GPEL 48pin V50_AMP
+legend:
+[v] - sure about destination of TP
+[?] - unsure, but destination looks something reasonable
+[!] - destination looks strange
 
-TP5  - Reset button
-TP6  - Select button
-TP7  - Back button
-TP8  - Cancel button
+--------------------------------------------------------------------------------
 
-TP9  - IRDA 3 - GPEL 10 IOB15
-TP10 - IRDA 4 - GPEL 24 IOC5
-TP11 - IRDA 5 - GPEL 23 IOC4
+TP1  - GND [v]
+TP2  - BAT - Vin [v]
+TP3  - GPEL 48 V50_AMP / AMP power [v] 
 
-TP12 - GPEL 60 X12MI
-TP13 - GPEL 61 X12MO
+TP5  - Reset button  [v]
+TP6  - Select button [v]
+TP7  - Back button   [v]
+TP8  - Cancel button [v]
 
-TP14 - GPEL 54 X32KO
-TP15 - GPEL 55 X32KI
+TP9  - IRDA 3 - GPEL 10 IOB15 / CSI Data[7] / WUT: only 6&7 bits connected [!]
+TP10 - IRDA 4 - GPEL 24 IOC5 / UART RX [v]
+TP11 - IRDA 5 - GPEL 23 IOC4 / UART TX [v]
 
-TP16 - GPEL 22 IOC3
-TP17 - GPEL 21 IOC2
-TP18 - GPEL 20 IOC1
+TP12 - GPEL 60 X12MI / 12MHz in  [v]
+TP13 - GPEL 61 X12MO / 12MHz out [v]
 
-TP19 - GPEL 42 VOR
-TP20 - GPEL 43 VOL
+TP14 - GPEL 54 X32KO / 32KHz out [v]
+TP15 - GPEL 55 X32KI / 32KHz in  [v]
 
-TP21 - GPEL 31 IOC12
-TP22 - GPEL 30 IOC11
+TP16 - GPEL 22 IOC3 / SPI RX [v]
+TP17 - GPEL 21 IOC2 / SPI TX [v]
+TP18 - GPEL 20 IOC1 / SPI CLK [v]
 
-TP23 - GPEL 28 IOC9
+TP19 - GPEL 42 DAC VOR / I2S TX [v]
+TP20 - GPEL 43 DAC VOL / I2S BCK [v]
 
-TP24 - GPEL 3 IOB4
+TP21 - GPEL 31 IOC12 / NAND CSB / WUT: where is no NAND on the board [!]
+TP22 - GPEL 30 IOC11 / NAND RDY / WUT: where is no NAND on the board [!]
 
-TP25 - GPEL 34 IOB1
+TP23 - GPEL 28 IOC9 / SD DAT2 / TFT CSB [?]
 
-TP28 - GPEL 11 IOA7
+TP24 - GPEL 3 IOB4 / CSI HSYNC [!]
+
+TP25 - GPEL 34 IOB1 / NAND CLE / SD2 DAT0 / TFT RS [!]
+
+TP28 - GPEL 11 IOA7 / TFT Data[4] / NAND Data[7] / SD2 CLK / WUT: ??? [!]
+
+U5   - GPEL 53 VSS_REG / LDO GND [v]
+
+PAD4 - GPEL 39 ADC MICIN / GPIO - IOD6 [?]
+PAD3 - GPEL 38 ADC LINEIN1 / GPIO - IOD1 [?]
+
+!1   - NC?
+R18  - R18 down - JP6 down - R19 top
+R19  - R18 down - JP6 down - R19 top
+
+B14  - GPEL 9 IOB14 / CSI Data[6] / WUT: why only some bits connected? [!]
+
+DP   - GPEL 58 DP / USB DP / WUT: where is no USB on the board [!]
+DM   - GPEL 57 DM / USB DM / WUT: where is no USB on the board [!]
