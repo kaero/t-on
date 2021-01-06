@@ -1,0 +1,68 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <script src="main.js" async defer></script>
+    <link href="style.css" rel="stylesheet"/>
+    <title>tamaed</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="menu stack-x">
+                <div class="stack-y">
+                    <label for="firmware-file-input"><u>F</u>irmware</label>
+                    <input type="file" id="firmware-file-input" accesskey="f"/>
+                </div>
+            </div>
+            <div class="map">
+                <canvas id="map-canvas"></canvas>
+            </div>
+            <div class="filter stack-x">
+                <div class="filter-group stack-x">
+                    <label for="entities-filter-type-input">Type</label>
+                    <select id="entities-filter-type-input">
+                        <option value="all" selected>all</option>
+                        <option value="image">image</option>
+                    </select>
+                </div>
+                <div class="filter-group stack-x">
+                    <label for="entity-preview-scale-input">Scale</label>
+                    <select id="entity-preview-scale-input">
+                        <option value="1">1 x 1</option>
+                        <option value="2">2 x 2</option>
+                        <option value="4" selected>4 x 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="entities">
+                <ul id="entities-list" class="entities-list">
+                </ul>
+                <div class="entity-preview">
+                    <canvas id="entity-preview-canvas"></canvas>
+                </div>
+                <code class="hex-area">
+                    <pre id="hex-area-offsets" class="hex-area-offsets">
+                    </pre>
+                    <pre id="hex-area-hextets" class="hex-area-hextets">
+                    </pre>
+                    <pre id="hex-area-chars" class="hex-area-chars">
+                    </pre>
+                </code>
+                <div class="hex-controls">
+                    <button id="hex-page-up-button" disabled>^^</button>
+                    <button id="hex-row-up-button" disabled>^</button>
+                    <button id="hex-row-down-button" disabled>V</button>
+                    <button id="hex-page-down-button" disabled>VV</button>
+                    <div class="stack-y">
+                        <label for="hex-offset-input">Offset</label>
+                        <input type="number" id="hex-offset-input" value="0" disabled/>
+                    </div>
+                    <div class="stack-y">
+                        <label for="hex-page-size-input">Page size</label>
+                        <input type="number" id="hex-page-size-input" value="512" disabled/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
