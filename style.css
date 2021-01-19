@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    background: rgba(200,200,200,.9);
+}
+
+.progress {
+    position: relative;
+    align-self: center;
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 500px;
+}
+
+.progress-bar {
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    background: white;
+    height: 36px;
+}
+
+.progress-bar-fill {
+    background: navy;
+    width: 50%;
+}
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* for Firefox */
+    min-height: 0;
+}
+
+.stack-x {
+    display: flex;
+    flex-direction: row;
+}
+
+.stack-y {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    padding: 16px;
+    border-bottom: 1px solid gray;
+    background: silver;
+}
+
+.map {
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 280px;
+    min-height: 280px;
+    border-bottom: 1px solid gray;
+}
+
+.hex-area {
+    min-width: 52em;
+    font-family: monospace;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.hex-area > pre {
+    font: 14px/16px monospace;
+    margin: 0;
+}
+
+.hex-area-offsets {
+    padding-right: 24px;
+    text-align: right;
+}
+
+.hex-area-chars {
+    padding-left: 24px;
+}
+
+.hex-controls {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    width: 110px;
+}
+
+.hex-controls > * {
+    margin-bottom: 16px;
+}
+
+.filter {
+    padding: 16px;
+}
+
+.filter-group > label {
+    margin-right: 16px;
+}
+
+.filter-group:after {
+    display: block;
+    content: '';
+    overflow: hidden;
+    width: 0;
+    border-left: 1px solid silver;
+    border-right: 1px solid lightgrey;
+    margin: 0 16px;
+}
+
+.filter-group:last-of-type:after {
+    display: none;
+}
+
+.filter-group > * {
+    align-self: center;
+}
+
+.entities {
+    flex-grow: 1;
+    overflow: auto;
+    /* for Firefox */
+    min-height: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.entities-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/** entity item */
+
+.entity {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2px 4px;
+    border-bottom: 1px solid silver;
+    font: 14px/20px monospace;
+    cursor: pointer;
+}
+
+.entity:last-child {
+    border-bottom: none;
+}
+
+.entity-type,
+.entity-offset,
+.entity-size,
+.entity-dimensions {
+    display: inline-block;
+}
+
+.entity-type,
+.entity-offset {
+    min-width: 8em;
+}
+
+.entity-dimensions {
+    min-width: 9em;
+}
+
+.entity-size {
+    min-width: 5em;
+}
+
+.entity-colors {
+    min-width: 3em;
+}
+
+.entity-dimensions > *:after {
+    content: ' × ';
+}
+
+.entity-dimensions > *:last-child:after {
+    content: '';
+}
+
+/** entity item // end */
+
+.entity-preview {
+    flex: 1 1 auto;
+    padding: 0 16px;
+}
