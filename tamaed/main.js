@@ -132,7 +132,7 @@
 
         static decodeImage(bytes, palette) {
             const halfBytePixel = palette.length <= 16;
-            const pixelsCount = halfBytePixel ? bytes.length * 2 : bytes;
+            const pixelsCount = halfBytePixel ? bytes.length * 2 : bytes.length;
             const pixels = new Uint8ClampedArray(pixelsCount * 4);
             if (halfBytePixel) {
                 for (let i = 0; i < bytes.length; i++) {
